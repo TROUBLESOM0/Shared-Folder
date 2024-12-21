@@ -11,6 +11,10 @@ if %COMPUTERNAME%==CI-D514 (
 	set host=CV-Laptop
 ) else if %COMPUTERNAME%==CI-L210 (
 	set host=uhd311-Laptop
+) else if %COMPUTERNAME%==CI-L223 (
+	set host=uhd312-Laptop
+) else if %COMPUTERNAME%==UHD311D (
+	set host=WV-Desktop
 ) else (
 	goto noname)
 echo "Configuring Shared Folder on %host%"
@@ -32,6 +36,10 @@ if %host%==uhd312 (
 	echo "Setting up for Control Van Laptop"
 ) else if %host%==uhd311-Laptop (
 	echo "Setting up for UHD311 Laptop"
+) else if %host%==uhd312-Laptop (
+	echo "Setting up for UHD312 Laptop"
+) else if %host%==WV-Desktop (
+	echo "Setting up for Work Van Desktop"
 ) else (goto broken)
 for /L %%A in (1,1,5) do (
 	<nul set /p "=."& >nul timeout 1
@@ -42,8 +50,10 @@ timeout /t 4 /nobreak >nul
 echo:
 echo Couldn't get it to work consistently , so ... You need to type:
 echo ping 192.168.60.130
-echo into command prompt    oh wait, I can do that and just query you
-timeout /t 5 /nobreak >nul
+echo into command prompt
+timeout /t 2 /nobreak >nul
+echo                   oh wait, I can do that and just query you
+timeout /t 3 /nobreak >nul
 echo:
 ping -n 1 192.168.60.100
 echo:
