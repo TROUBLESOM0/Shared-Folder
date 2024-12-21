@@ -7,7 +7,7 @@ Must setup a user and access permissions on 'CI-D022' before running this script
   The New User can have whatever name you want... It doesn't really matter, but it needs to be something you will remember<br/>
   For the password, I used Open1234.<br/>For all the security questions, I just typed in "ROV".<br/>
   *** Should be obvious, But DO NOT use a Microsoft Account or email to create the user ***<br/>
-  *** We are going to handle our own security and permissions,, because ... Fuck Microsoft !!! ***<br/><br/>
+  *** We are going to handle our own security and permissions,,, because ... Fuck Microsoft ! ***<br/><br/>
 ![adduser](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/AddUser.PNG)
 - Goto the root of /SHARED/ folder, select Properties, goto Security tab, goto Advanced.<br/><br/>
 ![advanced](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/Advanced.PNG)
