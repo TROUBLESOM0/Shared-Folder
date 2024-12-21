@@ -11,7 +11,14 @@ Must setup a user and access permissions on 'CI-D022' before running this script
 ![adduser](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/AddUser.PNG)
 - Goto the root of /SHARED/ folder, select Properties, goto Security tab, goto Advanced.<br/><br/>
 ![advanced](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/Advanced.PNG)
-- Then, select "Add" and add the User and set permissions.  Ensure You select "Check Names" to verify you typed it correctly.<br/><br/>
+- Then, select "Add" and add the User and set permissions.  Ensure You select "Check Names" to verify you typed it correctly.<br/>
+- To be able to EDIT, you will want to just allow "FULL CONTROL" (it's too difficult to try and tailor it down from here)<br/>
+- To be able to ONLY READ, you will want to only allow:<br/>
+     - Traverse<br/>
+     - List Folders<br/>
+     - Read Attributes<br/>
+     - Read Extended Attributes<br/>
+     - Read Premissions<br/><br/>
 ![permissions](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/Permissions.PNG)
 - DO NOT click the box labeled "Only apply these permissions to objects and /or containers within this container" - it will only give access to first level of sub-folders.
 - Click "Apply" and it should start updating the folder permissions (which should take a while).
