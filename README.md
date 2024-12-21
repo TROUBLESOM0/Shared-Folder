@@ -4,16 +4,22 @@ This is a batch script (.bat) to automatically configure a Windows 10/11 PC to h
 
 Must setup a user and access permissions on 'CI-D022' before running this script:
 - Create User in Control Panel.<br/><br/>
-![adduser](https://github.com/TROUBLESOM0/Shared-Folder/blob/db67240f636f3c1045f764f14615714ca1f14103/.images/AddUser.PNG)
+![adduser](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/AddUser.PNG)
 - Goto the root of /SHARED/ folder, select Properties, goto Security tab, goto Advanced.<br/><br/>
-![advanced](https://github.com/TROUBLESOM0/Shared-Folder/blob/2d9dc1428c251267a25fb81a860e221230638a64/.images/Advanced.PNG)
+![advanced](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/Advanced.PNG)
 - Then, select "Add" and add the User and set permissions.  Ensure You select "Check Names" to verify you typed it correctly.<br/><br/>
-![permissions](https://github.com/TROUBLESOM0/Shared-Folder/blob/2d9dc1428c251267a25fb81a860e221230638a64/.images/Permissions.PNG)
+![permissions](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/Permissions.PNG)
 - DO NOT click the box labeled "Only apply these permissions to objects and /or containers within this container" - it will only give access to first level of sub-folders.
 - Click "Apply" and it should start updating the folder permissions (which should take a while).
 - At This Point, go back to root of /SHARED/ and back into "Properties".
 - Select the Security tab and click on "Edit..."
 - Select "Add" and enter name.<br/><br/>
-
+![advpermissions](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/AdvPermissions.PNG)
+<br/><br/>
 - Ensure You select "Check Names" to verify you typed it correctly.
 - You should see the new user show up.  Here, you can confirm permissions are configured correctly.
+<br/><br/><br/>
+Now, Just edit the "Setup_Shared.bat" script with the New User.<br/>
+You will want to use a good Editor.  I used Code Writer from Actipro...downloaded from Microsoft Store.<br/>
+You should be able to get an idea of the template used and how to add the New User name.<br/>
+There are 2-(two) places you will need to add some lines of the code for the script to work correctly.
