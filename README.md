@@ -23,8 +23,8 @@ Must setup a user and access permissions on 'CI-D022' before running this script
 - DO NOT click the box labeled "Only apply these permissions to objects and /or containers within this container" - it will only give access to first level of sub-folders.
 - Click "Apply" and it should start updating the folder permissions (which should take a while).
 - At This Point, go back to root of /SHARED/ and back into "Properties".
-- Select the Security tab and click on "Edit..."
-- Select "Add" and enter name.<br/><br/>
+- Select the Sharing tab and click on "Advanced Sharing"
+- Select "Permissions", then "Add" and enter name.  Make sure click the "Check Names".  Then just Apply everything.<br/><br/>
 ![advpermissions](https://github.com/TROUBLESOM0/Shared-Folder/blob/152079b0ae62bf6cb92f31daddb9269c23615d5f/.images/AdvPermissions.PNG)
 <br/><br/>
 - Ensure You select "Check Names" to verify you typed it correctly.
