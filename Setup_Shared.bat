@@ -15,10 +15,15 @@ if %COMPUTERNAME%==CI-D514 (
   set host=CV-Laptop
 ) else if %COMPUTERNAME%==UHD311D (
   set host=WV-Desktop
+) else if %COMPUTERNAME%==Workshop (
+  set host=Workshop
 ) else (
 goto noname
 )
+echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+echo "ver. 8.0"
 echo "Configuring Shared Folder on %host%"
+echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo:
 echo:
 echo %date% %time%
@@ -32,7 +37,7 @@ if %host%==uhd312 (
 ) else if %host%==uhd311 (
   echo "Setting up for UHD311"
 ) else if %host%==super311312 (
-  echo "Setting up for Super311312"
+  echo "Setting up for Super311312
 ) else if %host%==uhd311-Laptop (
   echo "Setting up for uhd311-Laptop"
 ) else if %host%==uhd312-Laptop (
@@ -41,6 +46,8 @@ if %host%==uhd312 (
   echo "Setting up for CV-Laptop"
 ) else if %host%==WV-Desktop (
   echo "Setting up for WV-Desktop"
+) else if %host%==Workshop (
+  echo "Setting up for Workshop"
 ) else (
 goto broken
 )
@@ -48,9 +55,9 @@ goto broken
 echo So far everything looks good, but you need to confirm you can see the server.
 timeout /t 4 /nobreak >nul
 echo:
-echo Couldn't get it to work consistently , so ... You need to type:
-echo ping 192.168.60.100
-echo into command prompt    oh wait, I can do that and just query you
+echo
+echo
+echo      oh wait, I can do that and just query you
 timeout /t 5 /nobreak >nul
 echo:
 ping -n 1 192.168.60.100
@@ -81,12 +88,12 @@ goto end
 
 :notconnect
 echo:
-echo Unable to locate 192.168.60.130 ...
+echo Unable to locate 192.168.60.100 ...
 echo Check that this computer has an IP Address in the range "192.168.60.xxx"
 echo Or verify the Shared Computer is powered on and logged in with:
 echo User: uhd
 echo Password: Open1234
-echo And has the IP Address of 192.168.60.130
+echo And has the IP Address of 192.168.60.100
 echo:
 echo Then come back and run program again.
 echo:
@@ -108,5 +115,4 @@ exit
 :end
 echo Press any key to end program ....
 pause >nul
-
 exit
