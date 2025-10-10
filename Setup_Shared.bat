@@ -37,7 +37,7 @@ if %host%==uhd312 (
 ) else if %host%==uhd311 (
   echo "Setting up for UHD311"
 ) else if %host%==super311312 (
-  echo "Setting up for Super311312
+  echo "Setting up for Super311312"
 ) else if %host%==uhd311-Laptop (
   echo "Setting up for uhd311-Laptop"
 ) else if %host%==uhd312-Laptop (
@@ -116,3 +116,4 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
