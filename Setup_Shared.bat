@@ -68,8 +68,8 @@ goto broken
 echo So far everything looks good, but you need to confirm you can see the server.
 timeout /t 4 /nobreak >nul
 echo:
-echo
-echo
+echo:
+echo:
 echo      oh wait, I can do that and just query you
 timeout /t 5 /nobreak >nul
 echo:
@@ -132,3 +132,4 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
