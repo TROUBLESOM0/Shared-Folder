@@ -1,4 +1,4 @@
-@REM v.8.1
+@REM v.11
 @echo off
 title CONFIGURE FOR SHARED FOLDER ON %COMPUTERNAME%
 color 2
@@ -18,11 +18,17 @@ if %COMPUTERNAME%==CI-D514 (
   set host=WV-Desktop
 ) else if %COMPUTERNAME%==Workshop (
   set host=Workshop
+) else if %COMPUTERNAME%==CI-D541 (
+  set host=CI-D541
+) else if %COMPUTERNAME%==DESKTOP-ICGA7F0 (
+  set host=DESKTOP-ICGA7F0
+) else if %COMPUTERNAME%==DESKTOP-A55D57I (
+  set host=DESKTOP-A55D57I
 ) else (
 goto noname
 )
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-echo "ver. 8.0"
+echo "ver. 11 - Configures shared folder for 11 PC's"
 echo "Configuring Shared Folder on %host%"
 echo "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 echo:
@@ -49,6 +55,12 @@ if %host%==uhd312 (
   echo "Setting up for WV-Desktop"
 ) else if %host%==Workshop (
   echo "Setting up for Workshop"
+) else if %host%==CI-D541 (
+  echo "Setting up for CI-D541"
+) else if %host%==DESKTOP-ICGA7F0 (
+  echo "Setting up for DESKTOP-ICGA7F0"
+) else if %host%==DESKTOP-A55D57I (
+  echo "Setting up for DESKTOP-A55D57I"
 ) else (
 goto broken
 )
@@ -104,12 +116,15 @@ goto end
 :noname
 echo The computer you are attempting to configure is not in the list
 echo Nothing left to do here except changing this code
+echo Open Command Prompt and type "systeminfo". Send me what is listed as "Host Name:"
 echo Goodbye
 pause >nul
 exit
 
 :broken
 echo Somehting Went TErrivllei RWongr
+echo Open Command Prompt and type "systeminfo". Send me what is listed as "Host Name:"
+echo Goodbye
 pause >nul
 exit
 
@@ -117,5 +132,3 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
-
-
