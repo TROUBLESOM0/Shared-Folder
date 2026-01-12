@@ -1,3 +1,4 @@
+@REM v.8.1
 @echo off
 title CONFIGURE FOR SHARED FOLDER ON %COMPUTERNAME%
 color 2
@@ -116,4 +117,5 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
 
