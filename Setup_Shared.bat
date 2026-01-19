@@ -20,7 +20,7 @@ if %COMPUTERNAME%==CI-D514 (
   set host=Workshop
 ) else if %COMPUTERNAME%==CI-D541 (
   set host=CI-D541
-) else if %COMPUTERNAME%==DESKTOP-ICGA7F0 (
+) else if %COMPUTERNAME%==DESKTOP-ICGA7FO (
   set host=DESKTOP-ICGA7F0
 ) else if %COMPUTERNAME%==DESKTOP-A55D57I (
   set host=DESKTOP-A55D57I
@@ -138,5 +138,6 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
 
 
