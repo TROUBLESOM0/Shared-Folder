@@ -1,4 +1,4 @@
-@REM v.11
+@REM v.11.1
 @echo off
 title CONFIGURE FOR SHARED FOLDER ON %COMPUTERNAME%
 color 2
@@ -72,8 +72,8 @@ echo:
 echo:
 echo      oh wait, I can do that and just query you
 timeout /t 5 /nobreak >nul
-echo:
 ping -n 1 192.168.60.100
+echo:
 echo:
 set /p input=Was the ping successfull and you want to continue setting up on %host% ? (type y/n)
 if %input%==y (goto connect) else (goto end)
@@ -82,9 +82,9 @@ if %input%==y (goto connect) else (goto end)
 echo:
 echo Located 192.168.60.100 on this network. Setting up Shared Drive...
 net use S: \\192.168.60.100\SHARED /user:CI-D022\%host% Open1234 /persistent:Yes
-echo: :::
 echo:
-echo: :::
+echo:
+echo:
 echo:
 echo There should now be a network drive labeled "S:Shared" in the left column in Windows Explorer.
 echo --------------------------------------------
@@ -116,7 +116,13 @@ goto end
 :noname
 echo The computer you are attempting to configure is not in the list
 echo Nothing left to do here except changing this code
-echo Open Command Prompt and type "systeminfo". Send me what is listed as "Host Name:"
+
+set "d=%USERPROFILE%\Desktop"
+set "o=%d%\Shared_Run_Debug.bar"
+systeminfo > "%o%"
+echo "File Shared_Run_Debug.bar was created on Desktop.  Send this for debugging"
+echo If you can't find the file, then
+echo Open Command Prompt and type "ipconfig /all". Send me what is listed as "Host Name:"
 echo Goodbye
 pause >nul
 exit
@@ -132,4 +138,5 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
 
