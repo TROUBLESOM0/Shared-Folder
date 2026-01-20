@@ -81,6 +81,9 @@ if %input%==y (goto connect) else (goto end)
 :connect
 echo:
 echo Located 192.168.60.100 on this network. Setting up Shared Drive...
+echo    removing current shares...
+net use * /d
+echo    adding shared folder...
 net use S: \\192.168.60.100\SHARED /user:CI-D022\%host% Open1234 /persistent:Yes
 echo:
 echo:
@@ -138,6 +141,7 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
 
 
 
