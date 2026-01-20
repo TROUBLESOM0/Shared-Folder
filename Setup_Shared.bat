@@ -20,10 +20,10 @@ if %COMPUTERNAME%==CI-D514 (
   set host=Workshop
 ) else if %COMPUTERNAME%==CI-D541 (
   set host=CI-D541
-) else if %COMPUTERNAME%==UHD311-Wall-PC (
-  set host=UHD311-Wall-PC
-) else if %COMPUTERNAME%==UHD312-Wall-PC (
-  set host=UHD312-Wall-PC
+) else if %COMPUTERNAME%==UHD311-WALL-PC (
+  set host=UHD311-WALL-PC
+) else if %COMPUTERNAME%==UHD312-WALL-PC (
+  set host=UHD312-WALL-PC
 ) else (
 goto noname
 )
@@ -57,9 +57,9 @@ if %host%==uhd312 (
   echo "Setting up for Workshop"
 ) else if %host%==CI-D541 (
   echo "Setting up for CI-D541"
-) else if %host%==UHD311-Wall-PC (
+) else if %host%==UHD311-WALL-PC (
   echo "Setting up for UHD311-Wall-PC"
-) else if %host%==UHD312-Wall-PC (
+) else if %host%==UHD312-WALL-PC (
   echo "Setting up for UHD312-Wall-PC"
 ) else (
 goto broken
@@ -138,6 +138,7 @@ exit
 echo Press any key to end program ....
 pause >nul
 exit
+
 
 
 
